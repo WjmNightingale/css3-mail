@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web邮箱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title">
+        <div class="title_inner">
+            <h1>web邮箱</h1>
+            <p>css3实现的动画效果</p>
+        </div>
+    </div>
+    <div class="container" style="border:1px solid green">
+        <!-- user-item1 -->
+        <input type="checkbox" id="message-1">
+
+        <label for="message-1" href="#move">
+            <!-- checkbox未选中时，单个联系人样式 -->
+            <div class="container_ui_item" style="border:1px solid red">
+                <!-- 联系人头像 -->
+                <div class="face">
+                    <img src="img/3.jpg" alt="User1">
+                    <!--  提供背景颜色 -->
+                    <div class="color_bar one">
+                        <!-- checkbox为选中状态时，即选中该联系人时显示“Now reading” -->
+                        <p>Now reading</p>
+                        <!-- 鼠标悬浮在该联系人列表框时显示“Read” -->
+                        <span>Read</span>
+                    </div>
+                </div>
+                <!-- checkbox未选中时，联系人头像旁边邮件2级标题 -->
+                <h2>aspca</h2>
+                <!-- 表示邮件阅读状态的小点 -->
+                <div class="dot  active"></div>
+                <!-- checkbox未选中时，联系人头像旁边邮件3级标题 -->
+                <h3>subj:thanks,you are amazing</h3>
+                <!-- checkbox未选中时，联系人头像旁边邮件4级标题 -->
+                <h4>your generous donation saved 3 million puppies...</h4>
+            </div>
+
+            <!-- checkbox选中时，展示出来的邮件-->
+            <div class="container_ui_expand" id="close" style="border:1px solid red">
+                <!--  邮件顶部部样式，即背景色 -->
+                <div class="heading">
+                    <div class="heading_top"></div>
+                    <!-- 将div.container_ui_expand与input关联 -->
+                    <label for="message-1">x</label>
+                </div>
+                <!-- 邮件主体 -->
+                <div class="body">
+                    <!--  用户信息 -->
+                    <div class="user">
+                        <!--  用户头像 -->
+                        <div class="face">
+                            <img src="img/3.jpg" alt="">
+                        </div>
+                        <!-- 邮件内容概述 -->
+                        <div class="details">
+                            <!-- 邮件标题 -->
+                            <h2>aspca</h2>
+                            <!-- 邮件主题概述 -->
+                            <h3>subj:thanks you are amazing</h3>
+                        </div>
+                    </div>
+                    <!-- 邮件正文内容 -->
+                    <div class="content">
+                        <p>
+                            <b>Email text</b>
+                            <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et commodo ipsum, ut rhoncus
+                            velit. Nullam placerat, ipsum sed pretium varius, magna metus ullamcorper magna, at porta quam
+                            libero ut est. Mauris cursus in magna in fermentum. Integer mollis convallis quam, vel dignissim
+                            ligula rutrum in.
+                            <br>Pellentesque ut purus porta, gravida tellus et, consectetur massa. Vestibulum ante ipsum primis
+                            in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque egestas convallis urna...
+                        </p>
+                        <!-- 邮件回复区域 -->
+                        <span>Reply:</span>
+                        <textarea name="" id="" cols="" rows=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </label>
+    </div>
+</body>
+
+</html>
