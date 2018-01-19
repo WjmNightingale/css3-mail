@@ -1,4 +1,131 @@
-body .container_ui_item label {
+body {
+    background-image: url("../img/blurred_bg.jpg");
+    font-family: "Raleway", sans-serif;
+    background-size: 100% 100%;
+    /*vh是CSS3的尺寸单位，1vh等于当前屏幕宽度的1%*/
+    height: 100vh;
+}
+
+body .title {
+    width: 750px;
+    text-align: center;
+    height: 500px;
+    /*该元素页面居中*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    color: black;
+}
+
+body .title_inner {
+    float: right;
+    width: 260px;
+    text-align: left;
+    position: relative;
+    top: 160px;
+}
+
+body .title_inner h1 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+body .title_inner h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 15px;
+}
+
+body .container {
+    width: 750px;
+    text-align: center;
+    height: 500px;
+    /*该元素页面居中显示*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+
+/*阅读器整体布局样式*/
+
+body .container_ui {
+    width: 350px;
+    height: 486px;
+    background-color: white;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0，0.16);
+    transition-property: opacity, top;
+    transition-duration: 0.4s;
+    animation: pop .5s forwards;
+}
+
+
+/*阅读器顶部布局样式*/
+
+body .container_ui_heading {
+    height: 60px;
+    width: 100%;
+    background-color: #333658;
+}
+
+body .container_ui_heading .header_icon {
+    float: left;
+    width: 33%;
+    height: 40px;
+    text-align: left;
+}
+
+body .container_ui_heading .header_icon img {
+    margin: 17px 20px 20px 20px;
+    cursor: pointer;
+}
+
+body .container_ui_heading h1 {
+    color: #aeb1d8;
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 10px;
+    margin: 0;
+    font-size: 12px;
+    float: left;
+    width: 33%;
+    letter-spacing: 1px;
+    line-height: 64px;
+}
+
+body .container_ui_heading .menu_icon {
+    width: 33%;
+    float: left;
+    text-align: right;
+    position: relative;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+}
+
+body .container_ui_heading .menu_icon div {
+    width: 21px;
+    height: 2px;
+    float: right;
+    display: block;
+    margin-bottom: 3px;
+    border-radius: 1px;
+    clear: both;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+
+/*阅读器单个联系人布局样式*/
+
+body .container_ui label {
     cursor: pointer;
     display: block;
     max-height: 71px;
@@ -6,96 +133,377 @@ body .container_ui_item label {
     width: 100%;
     overflow: hidden;
 }
-body .container_ui_item input[type="checkbox"] {
+
+body .container_ui input[type="checkbox"] {
     display: none;
 }
+
 body .container_ui_item {
-    text-align: center;
+    text-align: left;
     width: 100%;
     height: 74px;
     float: left;
-    box-shadow: 0px -1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px -1px rgba(0, 0, 0, 0.07);
     color: white;
     background-color: #f5f5f5;
-    cursor: pointer; 
+    cursor: pointer;
 }
-body .container label .container_ui_item {
+
+body .container_ui label .container_ui_item {
     pointer-events: none;
 }
-body .container label:hover > .container_ui_item {
-    background-color: #eaeaea !important;
+
+body .container_ui label:hover>.container_ui_item {
+    background-color: #EAEAEA !important;
 }
+
+
 /*左侧用户头像样式*/
+
 body .container_ui_item .face {
     float: left;
     font-weight: 600;
     margin: 0;
-    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
 }
+
 body .container_ui_item .face img {
     height: 81px;
 }
+
+
 /*.color_bar的样式*/
+
 body .container_ui_item .face .color_bar {
-    width: 6px;
-    height: 71px;
-    position: absolute;
-    top: 0;
-    right: 0;
     float: right;
+    width: 6px;
+    position: absolute;
+    right: 0;
     text-align: center;
+    height: 71px;
+    top: 0;
     z-index: 1;
 }
-body .container label:hover > .container_ui_item .face .color_bar {
+
+body .container_ui label:hover>.container_ui_item .face .color_bar {
     width: 81px;
     transition-property: width;
     transition-duration: .4s;
     transition-timing-function: linear;
 }
-body .container input[type="checkbox"]:checked + label >.container_ui_item .face .color_bar {
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_item .face .color_bar {
     right: auto;
     width: 350px;
     height: 71px;
 }
-/*p处理*/
+
+
+/*p样式处理*/
+
 body .container_ui_item .face .color_bar p {
     opacity: 0;
     margin-top: 26px;
 }
-body .container label:hover > .container_ui_item .face .color_bar p {
+
+body .container_ui label:hover>.container_ui_item .face .color_bar p {
     opacity: 0;
 }
-body .container input[type="checkbox"]:checked + label > .container_ui_item .face .color_bar p {
-    opacity: 0;
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_item .face .color_bar p {
+    opacity: 1;
     transition-property: opacity;
     transition-duration: .3s;
     transition-delay: .4s;
 }
-/*span处理*/
+
+
+/*span样式处理*/
+
 body .container_ui_item .face .color_bar span {
     opacity: 0;
     font-size: 12px;
     position: relative;
     top: -56px;
 }
-body .container label:hover > .container_ui_item .face .color_bar span {
+
+body .container_ui label:hover>.container_ui_item .face .color_bar span {
     opacity: 1;
     transition-property: opacity;
     transition-duration: .2s;
     transition-timing-function: linear;
     transition-delay: .3s;
 }
-body .container input[type="checkbox"]:checked + label > .container_ui_item .face .color_bar span {
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_item .face .color_bar span {
     display: none;
 }
-/*input未被选中时左侧邮件体概述*/
+
+
+/*未展开状态左侧邮件概述样式*/
+
 body .container_ui_item h2,
 body .container_ui_item h3,
 body .container_ui_item h4 {
     color: black;
 }
+
 body .container_ui_item h2 {
     font-size: 11px;
     display: inline-block;
+    color: #515151;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin: 10px 0px 0px 0px;
+    padding-top: 0px;
+}
+
+body .container_ui_item h3 {
+    font-size: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #B2B2B2;
+}
+
+body .container_ui_item h4 {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0;
+    color: #919191;
+}
+
+
+/*阅读状态点显示样式*/
+
+body .container_ui .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #cdcdcd;
+    border-radius: 100%;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    z-index: -0;
+    left: 3px;
+}
+
+body .container_ui .active {
+    background-color: #6cbe63;
+}
+
+
+/*未选中状态展开邮件主体样式*/
+
+
+/*X图标显示样式*/
+
+body .container_ui .container_ui_expand label {
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #333658;
+}
+
+body .container_ui .container_ui_expand label:hover {
+    color: #444444;
+}
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_expand label {
+    pointer-events: auto;
+}
+
+
+/*展开邮件主体样式*/
+
+body .container_ui_expand {
+    width: 350px;
+    height: 486px;
+    box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: white;
+    transition-property: left, opacity;
+    transition-duration: .4s;
+    transition-delay: .2s;
+}
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_expand {
+    left: 380px;
+    opacity: 1;
+    transition-property: left, opacity;
+    transition-duration: .4s;
+    transition-timing-function: linear;
+    pointer-events: none;
+}
+
+body .container_ui_expand .heading .heading_top {
+    width: 100%;
+    height: 10px;
+    background-color: #56b699;
+}
+
+body .container_ui_expand .body .user {
+    height: 65px;
+    border-bottom: 1px solid #ececec;
+}
+
+body .container_ui_expand .body .user .face {
+    float: left;
+}
+
+body .container_ui_expand .body .user .face img {
+    width: 40px;
+    margin: 10px 25px;
+    border: 2px solid white;
+    border-radius: 100%;
+    transform: scale(0);
+}
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_expand .body .user .face img {
+    animation: pop .5s .5s forwards;
+}
+
+body .container_ui input[type="checkbox"]:not(:checked)+label>.container_ui_expand .body .user .face img {
+    animation: poprev .5s .5s forwards;
+    transform: scale(0);
+    transition-property: transform;
+}
+
+body .container_ui_expand .body .user {
+    text-align: left;
+}
+
+body .container_ui_expand .body .user .details h2 {
+    font-size: 14px;
+    font-weight: 800;
+    display: inline-block;
+    color: #515151;
+    text-transform: uppercase;
+    margin: 13px 0 0;
+}
+
+body .container_ui_expand .body .user .details h3 {
+    font-size: 12px;
+    font-weight: 300;
+    color: #B2B2B2;
+    text-transform: uppercase;
+    margin: 5px 0px 10px 0px;
+}
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_expand .body .user .details {
+    animation: popup .5s .7s forwards;
+}
+
+body .container_ui_expand .body .content {
+    opacity: 0;
+    text-align: left;
+    position: relative;
+    top: 10px;
+}
+
+body .container_ui input[type="checkbox"]:checked+label>.container_ui_expand .body .content {
+    animation: popup .5s .7s forwards;
+}
+
+body .container_ui_expand .body .content p {
+    text-align: justify;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 20px;
+    padding: 25px;
+    color: #9b9b9b;
+}
+
+body .container_ui_expand .body .content p b {
+    color: #444;
+}
+
+body .container_ui_expand .body .content span {
+    font-size: 10px;
+    font-weight: 800;
+    color: #7d7d7d;
+    display: block;
+    padding: 0 25px;
+    position: relative;
+    top: -10px;
+}
+
+body .container_ui_expand .body .content textarea {
+    width: 295px;
+    height: 60px;
+    margin: 0 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    resize: none;
+}
+
+
+/*Let's choose some color*/
+
+.one {
+    background-color: #56b699 !important;
+}
+
+.two {
+    background-color: #5674B6 !important;
+}
+
+.three {
+    background: #D05E5E !important;
+}
+
+.four {
+    background: #ACD35D !important;
+}
+
+.five {
+    background: #EA9739 !important;
+}
+
+.six {
+    background: #B6568D !important;
+}
+
+
+/* Let's do some animations! */
+
+@-webkit-keyframes pop {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes poprev {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes popup {
+    from {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
